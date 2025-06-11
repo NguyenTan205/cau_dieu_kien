@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyen tap</title>
+</head>
+<body>
+  <script>
+    let username = prompt("Nhap vao ten dang nhap");
+    if (username == "Admin") {
+      let password = prompt("Nhap vao mat khau");
+        if (password == "Themaster") {
+          alert("Welcome")
+        } else {
+          alert("Wrong password!");
+        }
+    } else if(username == "null") {
+      alert("Canceled");
+    } else {
+      alert("I don’t know you");
+    }
+  </script>
+</body>
+</html>
