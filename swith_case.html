@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyen tap</title>
+</head>
+<body>
+    <!-- bai 1 -->
+  <script>
+    let browser = prompt("Nhap ten ung dung!");
+    switch (browser) {
+      case "Edge":
+        alert("You've got the Edge!");
+        break;
+      case "Firefox":
+      case "Chrome":
+      case "Safari":
+      case "Opera":
+        alert('Okay we support these browsers too');
+        break;
+      default:
+        alert('We hope that this page looks ok!');
+    }
+  </script>
+
+    <!-- bai 2 -->
+    <script>
+      let a = +prompt("Nhap gia tri a: ");
+      switch (a) {
+          case 0:
+              alert(0);
+              break;
+          case 1:
+              alert(1);
+              break;
+          case 2:
+          case 3:
+              alert("2,3");
+              break;
+      }
+    </script>
+
+    <!-- bai 3 -->
+    <script>
+        let value = +prompt("nhap vao so",0);
+        switch ((value > 0) ? 1 : (value < 0) ? -1 :0) {
+            case 1:
+                alert(1);
+                break;
+            case -1:
+                alert(-1);
+                break;
+            default:
+                alert(0);
+        }
+    </script>
+
+</body>
+</html>
