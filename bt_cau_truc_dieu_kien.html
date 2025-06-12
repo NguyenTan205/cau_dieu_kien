@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <!-- bai 1-->
+  <script>
+    let a = prompt("Nhap vao so a: ");
+    let b = prompt("Nhap vao so b: ");
+    if (a % b == 0){
+      alert("a chia het cho b");
+    } else {
+      alert("a khong chia het cho b");
+    }
+  </script>
+
+   <!--bai 2 -->
+  <script>
+    let old = prompt("Nhap so tuoi");
+    if (old >= 15) {
+      alert("Du dieu kien vao hoc lop 10");
+    } else {
+      alert("Khong du dieu kien hoc lop 10");
+    }
+  </script>
+
+  <!-- bai 3 -->
+  <script>
+    let a = parseInt(prompt("Nhap vao 1 so nguyen bat ki: "));
+    if (a > 0) {
+      alert("Số đó là số nguyên dương!")
+    } else if (a < 0) {
+      alert("Số đó là số nguyên âm!")
+    } else {
+      alert("Số 0");
+    }
+  </script>
+
+  <!-- bai 4 -->
+  <script>
+    let a = parseInt(prompt("Nhập số nguyên thứ nhất: "));
+    let b = parseInt(prompt("Nhập số nguyên thứ hai" ));
+    let c = parseInt(prompt("Nhập số nguyên thứ ba: "));
+    if (a > b && a > c) {
+      alert("số lớn nhất là số: " + a);
+    } else if (a > b && a < c) {
+      alert("Số lớn nhất là số: " + c);
+    } else {
+      alert("Số lớn nhất là số: " + b);
+    }
+  </script>
+
+  <!-- bai 5 -->
+  <script>
+    let a = parseFloat(prompt("Nhập điểm kiểm tra: "));
+    let b = parseFloat(prompt("Nhập điểm giữa kì: "));
+    let c = parseFloat(prompt("Nhập điểm cuối kì: "));
+    let ces = ((a * 1) + (b * 2) + (c * 3)) / 6;
+    if (ces >= 8){
+      alert("Giỏi");
+    } else if (ces >= 6.5) {
+      alert("Khá");
+    } else if (ces >= 5) {
+      alert("Trung bình");
+    } else {
+      alert("Yếu");
+    }
+  </script>
+
+  <!-- bai 6 -->
+<script>
+    let revenue = +parseInt(prompt("Nhập vào doanh thu bán hàng: "));
+    if (revenue >= 100000000) {
+        let sale = revenue * 0.07;
+        alert("Hoa hồng nhận được là: " + sale);
+    } else if(revenue >= 50000000) {
+        let sale = revenue * 0.05;
+        alert("Hoa hồng nhận được là: " + sale);
+    } else {
+        let sale = revenue * 0.03;
+        alert("Hoa hồng nhận được là: " + sale);
+    }
+</script>
+
+  <!-- Bai 7 -->
+    <script>
+        let name = prompt('Nhập vào nhà mạng muốn tính: ');
+        let minute_noimang = parseFloat(prompt("Nhập vào số phút nội mạng: "));
+        let minute_ngoaimang = parseFloat(prompt("Nhập vào số phút ngoại mạng: "));
+        if (name === "Viettel") {
+            let cuoc = 300 * minute_noimang + 1000 * minute_ngoaimang;
+            console.log("Số tiền bạn phải đóng là: " + cuoc);
+        } else if (name === "Vinaphone") {
+            let cuoc = 400 * minute_noimang + 1100 * minute_ngoaimang;
+            console.log("Số tiền bạn phải đóng là: " + cuoc);
+        } else if (name === "Mobiphone") {
+            let cuoc = 350 * minute_noimang + 1050 * minute_ngoaimang;
+            console.log("Số tiền bạn phải đóng là: " + cuoc);
+        } else {
+            console.log("Nhập đúng tên nhà mạng!!!")
+        }
+    </script>
+</body>
+</html>
