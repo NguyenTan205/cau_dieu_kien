@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- bai 1 -->
+  <script>
+    let c = +parseFloat(prompt("Nhập vào độ C: "));
+    let F = c * 9 / 5 + 32;
+    alert(F);
+  </script>
+
+<!-- bai 2 -->
+  <script>
+    let metter = +parseFloat(prompt("Nhập vào số mét: "));
+    let ft = metter * 3.2808;
+    alert(ft);
+  </script>
+
+<!-- bai 3 -->
+<script>
+  let a = parseFloat(prompt("Nhập vào cạnh hình vuông: "));
+  let area = a * a;
+  alert("Diện tích hình vuông là: " + area);
+</script>
+
+<!-- bai 4 -->
+<script>
+  let a = parseInt(prompt("Nhập chiều dài hình chữ nhật: "));
+  let b = parseFloat(prompt("Nhập chiều rộng hình chữ nhật: "));
+  let area = a * b;
+  alert("Diện tích hình chữ nhật: " + area);
+</script>
+
+<!-- bai 5 -->
+<script>
+  let a = parseFloat(prompt("Nhập vào cạnh đầu tiên: "));
+  let b = parseFloat(prompt("Nhập vào cạnh thứ hai: "));
+  let area = a * b / 2;
+  alert("Diện tích tam giác vuông: " + area);
+</script>
+
+<!-- bai 6 -->
+<script>
+  let a = parseFloat(prompt("Nhập vào số a: "));
+  let b = parseFloat(prompt("Nhập vào số b: "));
+  if (a != 0) {
+    let x = -b / a;
+    alert("Phương trình có nghiệm x = " + x);
+  } else {
+    alert("Không phải phương trình bậc nhất!")
+  }
+</script>
+
+<!-- bai 7 -->
+<script>
+  let a = parseFloat(prompt("Nhập vào số a: "));
+  let b = parseFloat(prompt("Nhập vào số b: "));
+  let c = parseFloat(prompt("Nhập vào số c: "));
+  if (a != 0) {
+    let delta = b * b - 4 * a * c;
+    if (delta > 0) {
+      let x1 = (-b + Math.sqrt(delta)) / 2 * a;
+      let x2 = (-b - Math.sqrt(delta)) / 2 * a;
+      alert("Phương trình có 2 nghiệm phân biêt: " + "x1 = " + x1 + "x2 = " + x2);
+    } else if (delta == 0) {
+      let x = -b / 2 * a;
+      alert("Phương trình có nghiệp kép: x = " + x);
+    } else {
+      alert("Phương trình vô nghiệp!");
+    }
+  } else {
+    alert("Không phải phương trình bậc 2");
+  }
+</script>
+
+<!-- bai 8 -->
+<script>
+  let a = parseFloat(prompt("Nhập vào 1 số: "));
+  if (a > 0 && a < 120) {
+    alert("Tuổi của người này là: " + a);
+  } else {
+    alert("Nhập lại chính xác số tuổi.")
+  }
+</script>
+
+<!-- bai 9 -->
+<script>
+  let a = parseFloat(prompt("Nhập vào số thực a: "));
+  let b = parseFloat(prompt("Nhập vào số thực b: "));
+  let c = parseFloat(prompt("Nhập vào số thực c: "));
+  if (a > 0 && b > 0 && c > 0 && a + b > c && a + c > b && b + c > a) {
+    alert("3 số thực nhập vào là cạnh của 1 tam giác!");
+  } else {
+    alert("3 số thực nhập vào không phải là cạnh của 1 tam giác!");
+  }
+</script>
+
+<!-- bai 10 -->
+<script>
+  let a = parseInt(prompt("Nhập vào số điện gia đình bạn tiêu thụ: "));
+  if (a > 400) {
+    let ces = 50 * 1728 + 50 * 1786 + 100 * 2074 + 100 * 2612 + 100 * 2919 + (a -400) * 3015;
+    alert("Số tiền bạn phải trả là: " + ces + "VND");
+  } else if (a > 300) {
+    let ces = 50 * 1728 + 50 * 1786 + 100 * 2074 + 100 * 2612 + (a - 300) * 2919;
+    alert("Số tiền bạn phải trả là: " + ces + "VND");
+  } else if (a > 200) {
+    let ces = 50 * 1728 + 50 * 1786 + 100 * 2074 + (a - 200) * 2612;
+    alert("Số tiền bạn phải trả là: " + ces + "VND");
+  } else if (a > 100) {
+    let ces = 50 * 1728 + 50 * 1786 + (a - 100) * 2074;
+    alert("Số tiền bạn phải trả là: " + ces + "VND");
+  } else if (a > 50) {
+    let ces = 50 * 1728 + (a - 50) * 1786;
+    alert("Số tiền bạn phải trả là: " + ces + "VND");
+  } else {
+    let ces = a * 1728;
+    alert("Số tiền bạn phải trả là: " + ces + "VND");
+  }
+</script>
+
+<!-- bai 11 -->
+<script>
+  let a = parseInt(prompt("Nhập số thu nhập của bạn: "));
+  if (a > 80000000) {
+    let ces = 5000000 * 0.05 + 5000000 * 0.1 + 8000000 * 0.15 + 14000000 * 0.2 + 20000000 * 0.25 + 28000000 * 0.3 + (a - 80000000) * 0.35;
+    alert("Số tiền thuế bạn phải đóng là: " + ces);
+  } else if (a > 52000000) {
+    let ces = 5000000 * 0.05 + 5000000 * 0.1 + 8000000 * 0.15 + 14000000 * 0.2 + 20000000 * 0.25 + (a - 52000000) * 0.3;
+    alert("Số tiền thuế bạn phải đóng là: " + ces);
+  } else if (a > 32000000) {
+    let ces = 5000000 * 0.05 + 5000000 * 0.1 + 8000000 * 0.15 + 14000000 * 0.2 + (a - 32000000) * 0.25;
+    alert("Số tiền thuế bạn phải đóng là: " + ces);
+  } else if (a > 18000000) {
+    let ces = 5000000 * 0.05 + 5000000 * 0.1 + 8000000 * 0.15 + (a - 18000000) * 0.2
+    alert("Số tiền thuế bạn phải đóng là: " + ces);
+  } else if (a > 10000000) {
+    let ces = 5000000 * 0.05 + 5000000 * 0.1 + (a - 10000000) * 0.15;
+    alert("Số tiền thuế bạn phải đóng là: " + ces);
+  } else if (a > 5000000) {
+    let ces = 5000000 * 0.05 + (a - 5000000) * 0.1;
+    alert("Số tiền thuế bạn phải đóng là: " + ces);
+  } else {
+    let ces = a * 0.05;
+    alert("Số tiền thuế bạn phải đóng là: " + ces);
+  }
+</script>
+
+<!-- bai 12 -->
+<script>
+  let P = prompt("Nhập vào giá trị số tiền ban đầu: ");
+  let r = prompt("Nhập vào lãi suất: ");
+  let n = prompt("Số tháng gửi: ");
+  if (isNaN(P) || isNaN(r) || isNaN(n)) {
+    alert("Vui lòng nhập đầy đủ và đúng số liệu")
+  }
+  let A = P * Math.pow(1+ parseFloat(r),n);
+  let lai = A - P;
+    alert("Số tiền lãi của bạn là: " + lai);
+</script>
+</body>
+</html>
