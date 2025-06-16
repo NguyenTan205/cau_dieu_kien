@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>good_fast_cheap</title>
+</head>
+<body>
+<table>
+  <tr>
+    <td></td>
+    <td>
+      <div>
+        <input
+                class="form-check-input"
+                type="checkbox"
+                role="switch"
+                id="switchCheckDefault1"
+                onclick="ham_1()"
+        />
+        GOOD
+      </div>
+      <div>
+        <input
+                class="form-check-input"
+                type="checkbox"
+                role="switch"
+                id="switchCheckDefault2"
+                onclick="ham_2()"
+        />
+        CHEAP
+      </div>
+      <div>
+        <input
+                class="form-check-input"
+                type="checkbox"
+                role="switch"
+                id="switchCheckDefault3"
+                onclick="ham_3()"
+        />
+        FASST
+      </div>
+    </td>
+    <td></td>
+  </tr>
+</table>
+<script>
+  var checked1 = document.getElementById("switchCheckDefault1");
+  var checked2 = document.getElementById("switchCheckDefault2");
+  var checked3 = document.getElementById("switchCheckDefault3");
+  function ham_1() {
+    if (checked2.checked && checked3.checked) {
+      checked3.checked = false;
+    }
+  }
+  function ham_2() {
+    if (checked1.checked && checked3.checked) {
+      checked1.checked = false;
+    }
+  }
+  function ham_3() {
+    if (checked1.checked && checked2.checked) {
+      checked2.checked = false;
+    }
+  }
+</script>
+</body>
+</html>
