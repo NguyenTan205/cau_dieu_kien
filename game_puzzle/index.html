@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Puzzle Game</title>
+</head>
+<body>
+<div id="image-container">
+  <img id="img1" src="img/funny-cat1_part1x1.jpg" width="400" alt="Image"><br>
+  <img id="img2" src="img/monkey_part2x1.jpg" width="400" alt="Image"><br>
+  <img id="img3" src="img/panda_swap_part3x1.jpg" width="400" alt="Image"><br>
+  <img id="img4" src="img/funny-cat1_part4x1.jpg" width="400" alt="Image"><br>
+  <img id="img5" src="img/funny-cat1_part5x1.jpg" width="400" alt="Image"><br>
+</div>
+<script>
+  document.getElementById("img1").addEventListener("click", function (e) {
+    if (e.target.src.includes('cat')) {
+      e.target.src = 'img/panda_swap_part1x1.jpg';
+    } else if (e.target.src.includes('monkey')) {
+      e.target.src = 'img/funny-cat1_part1x1.jpg';
+    } else {
+      e.target.src = 'img/monkey_part1x1.jpg';
+    }
+    checkEndGame();
+  });
+  document.getElementById("img2").addEventListener("click", function (e) {
+    if (e.target.src.includes('cat')) {
+      e.target.src = 'img/monkey_part2x1.jpg';
+    } else if (e.target.src.includes('monkey')) {
+      e.target.src = 'img/panda_swap_part2x1.jpg';
+    } else {
+      e.target.src = 'img/funny-cat1_part2x1.jpg';
+    }
+    checkEndGame();
+  });
+  document.getElementById("img3").addEventListener("click", function (e) {
+    if (e.target.src.includes('cat')) {
+      e.target.src = 'img/panda_swap_part3x1.jpg';
+    } else if (e.target.src.includes('monkey')) {
+      e.target.src = 'img/funny-cat1_part3x1.jpg';
+    } else {
+      e.target.src = 'img/monkey_part3x1.jpg';
+    }
+    checkEndGame();
+  });
+  document.getElementById("img4").addEventListener("click", function (e) {
+    if (e.target.src.includes('cat')) {
+      e.target.src = 'img/monkey_part4x1.jpg';
+    } else if (e.target.src.includes('monkey')) {
+      e.target.src = 'img/panda_swap_part4x1.jpg';
+    } else {
+      e.target.src = 'img/funny-cat1_part4x1.jpg';
+    }
+    checkEndGame();
+  });
+  document.getElementById("img5").addEventListener("click", function (e) {
+    if (e.target.src.includes('cat')) {
+      e.target.src = 'img/monkey_part5x1.jpg';
+    } else if (e.target.src.includes('monkey')) {
+      e.target.src = 'img/panda_swap_part5x1.jpg';
+    } else {
+      e.target.src = 'img/funny-cat1_part5x1.jpg';
+    }
+    checkEndGame();
+  });
+
+  function checkEndGame() {
+    console.log(document.getElementById("img1").src);
+    console.log(document.getElementById("img2").src);
+    console.log(document.getElementById("img3").src);
+    console.log(document.getElementById("img4").src);
+    console.log(document.getElementById("img5").src);
+    if (document.getElementById("img1").src.includes("cat")
+            && document.getElementById("img2").src.includes("cat")
+            && document.getElementById("img3").src.includes("cat")
+            && document.getElementById("img4").src.includes("cat")
+            && document.getElementById("img5").src.includes("cat")) {
+      document.getElementById("image-container").style.display = "inline-block";
+      document.getElementById("image-container").style.boxShadow = '4px 10px 5px 0px rgba(250,43,43,0.75)';
+    } else if (document.getElementById("img1").src.includes("monkey")
+            && document.getElementById("img2").src.includes("monkey")
+            && document.getElementById("img3").src.includes("monkey")
+            && document.getElementById("img4").src.includes("monkey")
+            && document.getElementById("img5").src.includes("monkey")) {
+      document.getElementById("image-container").style.display = "inline-block";
+      document.getElementById("image-container").style.boxShadow = '4px 10px 5px 0px rgba(250,43,43,0.75)';
+    } else if (document.getElementById("img1").src.includes("panda")
+            && document.getElementById("img2").src.includes("panda")
+            && document.getElementById("img3").src.includes("panda")
+            && document.getElementById("img4").src.includes("panda")
+            && document.getElementById("img5").src.includes("panda")) {
+      document.getElementById("image-container").style.display = "inline-block";
+      document.getElementById("image-container").style.boxShadow = '4px 10px 5px 0px rgba(250,43,43,0.75)';
+    } else {
+      document.getElementById("image-container").style.boxShadow = 'none';
+    }
+  }
+</script>
+</body>
+</html>
